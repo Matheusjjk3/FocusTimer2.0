@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "roboto", sans-serif;
+  font-weight: 500;
+
+  --txt-color: #29292e;
+  --hover-color: #02799d;
+}
+
+.flex {
+  display: flex;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19.2rem;
+  place-content: center;
+  height: 100vh;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+}
+
+#timer {
+  font-size: 14.1rem;
+  justify-content: center;
+  color: var(--txt-color);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  width: 36rem;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.ph {
+  font-size: 4.8rem;
+  color: var(--txt-color);
+  transition: 0.1s;
+}
+
+.ph:hover {
+  font-size: 5.2rem;
+  color: var(--hover-color);
+}
+
+#sounds {
+  display: grid;
+  grid-template-columns: 14rem 14rem;
+  grid-template-rows: 14rem 14rem;
+  gap: 3.2rem;
+  place-content: center;
+}
+
+/* trocar de cor no hover */
+
+.forest-color1,
+.rain-color1,
+.coffee-color1,
+.fire-color1 {
+  transition: 0.3s;
+}
+
+.forest-color2,
+.rain-color2,
+.coffee-color2,
+.fire-color2 {
+  transition: 0.3s;
+}
+
+/* Trocar de cor no hover */
+svg:hover .forest-color1,
+svg:hover .rain-color1,
+svg:hover .coffee-color1,
+svg:hover .fire-color1 {
+  fill: var(--hover-color);
+}
+
+svg:hover .forest-color2,
+svg:hover .rain-color2,
+svg:hover .coffee-color2,
+svg:hover .fire-color2 {
+  fill: white;
+}
+
+/* Trocar de cor ao clicar */
+.forest-on .forest-color1,
+.rain-on .rain-color1,
+.coffee-on .coffee-color1,
+.fire-on .fire-color1 {
+  fill: #02799d;
+}
+
+.forest-on .forest-color2,
+.rain-on .rain-color2,
+.coffee-on .coffee-color2,
+.fire-on .fire-color2 {
+  fill: white;
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
